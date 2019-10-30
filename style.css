@@ -1,0 +1,81 @@
+body {
+    background-color: #1C2321;
+    background-image: url('./assets/antlers.png');
+    font-family: 'Montserrat', sans-serif;
+}
+img {
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 380px;
+}
+
+h1 {
+    font-size: 500%;
+    background-color: linen;
+    text-align: center;
+}
+
+select {
+    font-size: 150%;
+    
+}
+#selector-form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.card-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    border: 3px black solid;
+    width: 400px;
+    background: #7D98A1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.animal-image {
+grid-column: 1 / span 2;
+grid-auto-rows: max-content;  
+padding-bottom: 15px;
+}
+
+div.animal-image {
+    display: flex;
+    justify-content: center;
+}
+.animal-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4; 
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.horns {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;  
+}
+
+.animal-description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;    
+}
+
+
