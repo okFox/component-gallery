@@ -25,7 +25,7 @@ select {
     padding-bottom: 25px;
 }
 
-.card-wrapper ul {
+.animal-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
