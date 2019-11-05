@@ -3,6 +3,7 @@ import Component from './Component.js';
 import Header from './home/Header.js';
 import CardList from './home/cardList.js';
 import images from './data/images.js'; 
+import HornsFilter from './home/Horns-filter.js';
 
 
 
@@ -15,10 +16,14 @@ class App extends Component {
         <div>
             <!-- Header goes here -->
     
-
-                <section class="animal-list">
+            <section class="filter-section">
+            <!-- filtering goes here -->
+            </section>
+            <section class="animal-list">
                     <!-- ImageList goes here -->
-                </section>
+            </section>
+
+
 
         </div>
     `;}
@@ -34,10 +39,30 @@ class App extends Component {
         const listSection = dom.querySelector('.animal-list');
         listSection.appendChild(cardListDOM);
 
-    // const filterImage = new filterImage({
-    //     image:image,
-    //     onFilter: 
-    // });
+        const hornsFilter = new HornsFilter({
+            images:images, 
+            onFilter: (horns) => {
+                let filteredHorns; 
+                if (!horns) {
+                    filteredHorns = images;
+                }
+                else {
+                    filteredHorns = images.filter(image => {
+                        return image.horns === horns;
+                    });
+                }
+                const updateProps = { images: filteredHorns };
+                cardList.update(updateProps);
+                console.log(filteredHorns);
+                
+
+            }
+        });
+
+        const filterHornsDOM = hornsFilter.renderDOM();
+
+        const optionsSection = dom.querySelector('.filter-section');
+        optionsSection.appendChild(filterHornsDOM);
 
     }
 
