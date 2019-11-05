@@ -4,11 +4,9 @@ class HornsFilter extends Component {
 
     onRender(select) {
         const onFilter = this.props.onFilter;
-
-        console.log(onFilter);
-
         select.addEventListener('change', () => {
             onFilter(select.value);
+
         });
     }
 
